@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                          // Target ECMAScript versión para compatibilidad con decoradores
+    "module": "commonjs",                        // Para que TypeScript transpile con el sistema de módulos de Node.js
+    "lib": ["ES2020"],                           // Librerías estándar de JavaScript (puedes añadir otras como "DOM" si trabajas con el navegador)
+    "strict": true,                              // Modo estricto para asegurar buenas prácticas
+    "esModuleInterop": true,                     // Para interoperabilidad con módulos ES6
+    "experimentalDecorators": true,              // Habilita el uso de decoradores (necesario para TypeORM)
+    "emitDecoratorMetadata": true,               // Emite metadatos necesarios para el soporte de decoradores
+    "moduleResolution": "node",                  // Resuelve módulos de la forma en que lo hace Node.js
+    "skipLibCheck": true,                        // Omitir la comprobación de tipos en los archivos de declaración de bibliotecas
+    "forceConsistentCasingInFileNames": true,    // Asegura que las importaciones coincidan con el caso del archivo
+    "outDir": "./dist",                          // Carpeta donde se guardarán los archivos compilados
+    "rootDir": "./src",                          // Carpeta raíz de los archivos TypeScript
+    "strictPropertyInitialization": false,       // Deshabilita la verificación estricta de inicialización de propiedades (relevante para TypeORM)
+    "resolveJsonModule": true,                   // Permite la importación de archivos JSON como módulos
+    "sourceMap": true                            // Genera archivos .map para facilitar la depuración
+  },
+  "include": ["src/**/*.ts"],                    // Incluir todos los archivos .ts en la carpeta src
+  "exclude": ["node_modules", "dist"]            // Excluir las carpetas node_modules y dist
+}
